@@ -1,0 +1,40 @@
+program ProsesShoppingChartSederhana
+READ AND WRITE "Username" with string
+READ AND WRITE "Password" with string
+READ AND WRITE "Email" with string
+READ AND WRITE "Login" with string
+READ AND WRITE "Register" with string
+READ AND WRITE "InputBarang" with string
+READ AND WRITE "DaftarBarang" with string
+READ AND WRITE "BarangDipilih" with list
+READ AND WRITE "MenghitungJumlahBarang" with string
+READ AND WRITE "TotalHargaBarangDipilih" with string
+
+
+DISPLAY "MENU Login/Register"
+STORE "Register" with register (Username, Password, Email)
+IF "Register" is equal to True
+	PRINT "Menu Utama"
+ELSE
+	PRINT "MENU Login/Register"
+STORE "Login" with login (Username, Password)
+IF "Login" with login (Username, Password)
+	PRINT "MENU UTAMA"
+ELSE
+	PRINT "MENU Login/Register"
+
+DISPLAY "MENU UTAMA DAN INPUT BARANG"
+ADD "BarangDipilih" with input from user
+
+DISPLAY "Total Belanja"
+ADD "hasiljumlahbarang" with output from admin
+
+DISPLAY "Form Pembayaran"
+STORE "lanjutpembayaran" with input from user
+
+DISPLAY "Checkout"
+STORE "Checkout" with checkout (totalpembayaran,formpembayaran)
+
+DISPLAY "CetakResi"
+
+
